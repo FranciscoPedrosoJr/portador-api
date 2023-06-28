@@ -1,9 +1,12 @@
 package com.jazztech.cardholder.applicationservice.service;
 
+import com.jazztech.cardholder.infrastructure.exceptions.CardHolderNotFoundException;
 import com.jazztech.cardholder.infrastructure.repository.entity.CardHolderEntity;
 import com.jazztech.cardholder.infrastructure.repository.util.CardHolderRepository;
 import com.jazztech.cardholder.presentation.dto.CardHolderDTOResponse;
 import com.jazztech.cardholder.infrastructure.repository.util.CardHolderMapper;
+import java.util.Optional;
+import java.util.UUID;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,5 +27,14 @@ public class CardHolderSearch {
         return cardHolderEntities.stream()
                 .map(mapper::entityToDTO)
                 .collect(Collectors.toList());
+    }
+
+    public CardHolderDTOResponse getCardHolderById(UUID id) {
+        Optional<CardHolderEntity> cardHolderEntity = cardHolderRepository.findById(id);
+        if (cardHolderEntity.isPresent()) {
+            return mapper.entityToDTO(cardHolderEntity.get());
+        } else {
+            throw new CardHolderNotFoundException("Card Holder not found");
+        }
     }
 }
