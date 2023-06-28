@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\applicationservice\domain\entity\BankAccountDomain.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\applicationservice\domain\entity\CardHolderDomain.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\applicationservice\service\CardHolderService.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\CardHolderApplication.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\infrastructure\apicreditanalisys\CreditAnalisysApi.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\infrastructure\apicreditanalisys\dto\CreditAnalisysDto.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\infrastructure\exceptions\CardHolderAlreadyExistsException.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\infrastructure\exceptions\ClientDoesNotCorrespondToCreditAnalysisException.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\infrastructure\exceptions\ClientWithIDAlreadyExistsException.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\infrastructure\exceptions\CreditAnalisysNotApproved.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\infrastructure\exceptions\CreditAnalisysNotFoundException.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\infrastructure\repository\entity\CardHolderEntity.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\infrastructure\repository\util\BankAccountMapper.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\infrastructure\repository\util\CardHolderMapper.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\infrastructure\repository\util\CardHolderRepository.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\presentation\controller\CardHolderController.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\presentation\dto\CardHolderDTORequest.java">
+<error line="28" column="19" severity="error" message="Type name &apos;bankAccountDomain&apos; must match pattern &apos;^[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.TypeNameCheck"/>
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\presentation\dto\CardHolderDTOResponse.java">
+</file>
+<file name="C:\Estavel\card-holder\src\main\java\com\jazztech\cardholder\util\enums\StatusEnum.java">
+</file>
+</checkstyle>
