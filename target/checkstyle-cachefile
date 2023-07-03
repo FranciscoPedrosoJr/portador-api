@@ -1,0 +1,21 @@
+#Mon Jun 26 16:49:09 BRT 2023
+configuration*?=6C1C9C1335647EC3610A7941FB55088DE24E6911
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\infrastructure\\repository\\util\\CardHolderRepository.java=1687528947484
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\infrastructure\\repository\\util\\CardHolderMapper.java=1687659193766
+module-resource*?\:suppressions.xml=9AA4CFF1CAA446FAB5141C1894866763FBF5A64E
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\infrastructure\\apicreditanalisys\\dto\\CreditAnalisysDto.java=1687528947452
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\presentation\\controller\\CardHolderController.java=1687460152937
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\applicationservice\\domain\\entity\\BankAccountDomain.java=1687659522510
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\presentation\\dto\\CardHolderDTOResponse.java=1687808566997
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\infrastructure\\exceptions\\ClientWithIDAlreadyExistsException.java=1687527815539
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\applicationservice\\domain\\entity\\CardHolderDomain.java=1687808918515
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\applicationservice\\service\\CardHolderService.java=1687808918479
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\infrastructure\\exceptions\\CreditAnalisysNotFoundException.java=1687527815509
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\infrastructure\\repository\\entity\\CardHolderEntity.java=1687808918404
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\infrastructure\\repository\\util\\BankAccountMapper.java=1687804890820
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\infrastructure\\exceptions\\CardHolderAlreadyExistsException.java=1687459972962
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\CardHolderApplication.java=1687530283058
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\util\\enums\\StatusEnum.java=1687808566960
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\infrastructure\\exceptions\\ClientDoesNotCorrespondToCreditAnalysisException.java=1687527815527
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\infrastructure\\apicreditanalisys\\CreditAnalisysApi.java=1687805596329
+C\:\\Estavel\\card-holder\\src\\main\\java\\com\\jazztech\\cardholder\\infrastructure\\exceptions\\CreditAnalisysNotApproved.java=1687528181009
