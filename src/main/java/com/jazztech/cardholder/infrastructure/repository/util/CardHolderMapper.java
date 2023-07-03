@@ -5,6 +5,7 @@ import com.jazztech.cardholder.infrastructure.repository.entity.CardHolderEntity
 import com.jazztech.cardholder.presentation.dto.CardHolderDTORequest;
 import com.jazztech.cardholder.presentation.dto.CardHolderDTOResponse;
 import jakarta.validation.Valid;
+import java.time.LocalDateTime;
 import java.util.UUID;
 import org.mapstruct.BeforeMapping;
 import org.mapstruct.Mapper;
@@ -16,7 +17,7 @@ public interface CardHolderMapper {
     @BeforeMapping
     default void generateIdAndDate(@MappingTarget CardHolderEntity cardHolderEntity) {
         cardHolderEntity.setCardHolderId(UUID.randomUUID());
-        //cardHolderEntity.setcreatedAt(LocalDateTime.now());
+        cardHolderEntity.setcardHolderCreatedAt(LocalDateTime.now());
     }
 
     CardHolderEntity domainToEntity(CardHolderDomain cardHolderDomain);
@@ -25,5 +26,6 @@ public interface CardHolderMapper {
 
     @Mapping(source = "cardHolderId", target = "cardHolderId")
     CardHolderDTOResponse entityToDTO(@Valid CardHolderEntity cardHolderEntity);
+
 
 }

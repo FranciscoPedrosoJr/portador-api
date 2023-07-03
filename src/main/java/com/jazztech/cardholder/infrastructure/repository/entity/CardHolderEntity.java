@@ -5,8 +5,6 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.time.LocalDateTime;
@@ -27,6 +25,7 @@ public class CardHolderEntity {
     @Column(name = "cardholderid")
     UUID cardHolderId;
 
+    @Column(name = "clientid")
     UUID clientid;
 
     @Enumerated(EnumType.STRING)
@@ -46,12 +45,27 @@ public class CardHolderEntity {
 
     public CardHolderEntity(
             UUID cardHolderId,
+            UUID clientid,
             Double cardHolderLimit,
+            StatusEnum cardHolderStatus,
             LocalDateTime cardHolderCreatedAt
     ) {
         this.cardHolderId = cardHolderId;
+        this.clientid = clientid;
         this.cardHolderLimit = cardHolderLimit;
+        this.cardHolderStatus = cardHolderStatus;
         this.cardHolderCreatedAt = cardHolderCreatedAt;
+    }
+
+    public void setcardHolderCreatedAt(LocalDateTime now) {
+        this.cardHolderCreatedAt = cardHolderCreatedAt;
+    }
+
+    public UUID getclientid() {
+        return clientid;
+    }
+    public void setclientid(UUID clientid) {
+        this.clientid = clientid;
     }
 
 }

@@ -15,16 +15,16 @@ import java.util.UUID;
 public class CreditCardEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "cardId")
+    @Column(name = "cardid")
     private UUID cardId;
 
-    @Column(name = "cardNumber")
+    @Column(name = "cardnumber")
     private String cardNumber;
 
     @Column(name = "cvv")
     private Integer cvv;
 
-    @Column(name = "dueDate")
+    @Column(name = "duedate")
     private LocalDate dueDate;
 
     @Column(name = "createdat")
@@ -33,7 +33,7 @@ public class CreditCardEntity {
     @Column(name = "updatedat")
     private LocalDateTime updatedAt;
 
-    @Column(name = "cardHolderId")
+    @Column(name = "cardholderid")
     private UUID cardHolderId;
 
     public CreditCardEntity() {
@@ -44,7 +44,7 @@ public class CreditCardEntity {
     }
 
     public void setCardId(UUID cardId) {
-        this.cardId = cardId;
+        this.cardId = UUID.randomUUID();
     }
 
     public String getCardNumber() {
@@ -94,4 +94,5 @@ public class CreditCardEntity {
     public void setCardHolderId(UUID cardHolderId) {
         this.cardHolderId = cardHolderId;
     }
+
 }

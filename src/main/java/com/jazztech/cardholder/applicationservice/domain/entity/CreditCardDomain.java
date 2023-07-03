@@ -15,4 +15,21 @@ public record CreditCardDomain(
         LocalDateTime updatedAt,
         UUID cardHolderId
 ){
+    public CreditCardDomain(
+            UUID cardId,
+            String cardNumber,
+            Integer cvv,
+            LocalDate dueDate,
+            LocalDateTime createdAt,
+            LocalDateTime updatedAt,
+            UUID cardHolderId
+    ) {
+        this.cardId = cardId;
+        this.cardNumber = cardNumber;
+        this.cvv = cvv;
+        this.dueDate = dueDate;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.cardHolderId = cardHolderId;
+    }
 }

@@ -7,6 +7,7 @@ import com.jazztech.cardholder.infrastructure.repository.entity.CardHolderEntity
 import com.jazztech.cardholder.infrastructure.repository.entity.CreditCardEntity;
 import com.jazztech.cardholder.infrastructure.repository.util.CardHolderRepository;
 import com.jazztech.cardholder.infrastructure.repository.util.CreditCardRepository;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Random;
 import java.util.UUID;
@@ -29,9 +30,12 @@ public class CreditCardService {
                 .orElseThrow(() -> new CardHolderNotFoundException("Card holder not found"));
 
         final CreditCardEntity creditCardEntity = new CreditCardEntity();
+        creditCardEntity.setCardId(creditCardDomain.cardId());
         creditCardEntity.setCardNumber(generateCardNumber());
         creditCardEntity.setCvv(generateCvv());
         creditCardEntity.setCreatedAt(LocalDateTime.now());
+        creditCardEntity.setCardHolderId(cardHolderId);
+        creditCardEntity.setDueDate(LocalDate.now());
 
         creditCardRepository.save(creditCardEntity);
 
@@ -56,7 +60,7 @@ public class CreditCardService {
         return CvvRandom + random.nextInt(CvvBound);
     }
 
-    public void updateCardHolderLimit(UUID cardHolderId, UUID cardId, Double newLimit) {
+    public double updateCardHolderLimit(UUID cardHolderId, UUID cardId, Double Limit) {
         final CardHolderEntity cardHolder = cardHolderRepository.findById(cardHolderId)
                 .orElseThrow(() -> new CardHolderNotFoundException("Card holder not found"));
 
@@ -64,7 +68,8 @@ public class CreditCardService {
                 .orElseThrow(() -> new CreditCardNotFoundException("Credit card not found"));
 
 
-        cardHolder.setCardHolderLimit(newLimit);
-        creditCardRepository.save(creditCard);
+        cardHolder.setCardHolderLimit(Limit);
+        cardHolderRepository.save(cardHolder);
+        return Limit;
     }
 }

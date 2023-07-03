@@ -51,7 +51,7 @@ public class CreateCardHolderTest {
     @Test
     void shouldMapEntitys() {
         final CardHolderDTORequest cardHolderDTORequest = CardHolderRequestFactory.CardHolderRequest();
-        final CardHolderEntity cardHolderEntity = CardHolderEntityFactory.CardHolderEntity();
+        final CardHolderEntity cardHolderEntity = CardHolderEntityFactory.createCardHolderEntity();
 
         Mockito.when(creditAnalisysApi.getCreditAnalisysById(analisysIdArgumentCaptor.capture())).thenReturn(
                 Collections.singletonList(CreditAnalisysDtoFactory.CreditAnalisysDto()));
@@ -61,7 +61,7 @@ public class CreateCardHolderTest {
         final CardHolderEntity cardHolderEntityvalue = cardHolderEntityArgumentCaptor.getValue();
 
         assertEquals(cardHolderDTORequest.creditAnalysisId(), analisysIdArgumentCaptor.getValue());
-        assertEquals(cardHolderEntity.getClientid(), cardHolderEntityvalue.getClientid());
+        assertEquals(cardHolderEntity.getclientid(), cardHolderEntityvalue.getclientid());
         assertEquals(cardHolderEntity.getCardHolderStatus(), cardHolderEntityvalue.getCardHolderStatus());
         assertEquals(cardHolderEntity.getCardHolderLimit(), cardHolderEntityvalue.getCardHolderLimit());
     }
